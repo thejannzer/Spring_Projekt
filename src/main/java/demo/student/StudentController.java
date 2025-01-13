@@ -4,13 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/student")
+@RequestMapping(path = "/student")
 public class StudentController {
 
     //Referenz auf StudentService
@@ -18,11 +19,17 @@ public class StudentController {
 
     @Autowired   //Dependecyinjection
     public StudentController(StudentService studentService) {
+
         this.studentService = studentService;
     }
 
     @GetMapping("/hello")
-    public List<Student> getStudents() {
-        return studentService.getStudents();
+    public String getStudents(Model model) {
+
+        List<Student> students = studentService.getStudents();
+        model.addAttribute("students", students);
+
+        return "students"; // verweist auf students.html im templates-Ordner
     }
+
 }
