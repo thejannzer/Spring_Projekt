@@ -1,15 +1,14 @@
 package demo.student;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class PhotoController {
@@ -32,4 +31,8 @@ public class PhotoController {
         }
         return photo;
    }
+
+   /*
+   @PostMapping("/photoss")
+    public Photo create(@RequestPart("") Photo photo) {} */
 }
