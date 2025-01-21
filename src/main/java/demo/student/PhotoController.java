@@ -4,13 +4,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.stereotype.Controller;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 import java.util.UUID;
 
-@RestController
+@Controller
 public class PhotoController {
 
     private Map<String, Photo> db = new HashMap<>(){
@@ -19,7 +20,7 @@ public class PhotoController {
 
     @GetMapping("/")
    public String helloWorld() {
-       return "Hello World";
+       return "students";
    }
 
    @GetMapping("/photos/{id}")
@@ -31,6 +32,7 @@ public class PhotoController {
         }
         return photo;
    }
+   
 
    /*
    @PostMapping("/photoss")
