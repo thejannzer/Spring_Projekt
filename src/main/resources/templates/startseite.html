@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<style>
+  body {
+    background-color: #f0f000;
+  }
+  .headline {
+
+    font-size: 32px;
+    text-align: center;
+  }
+  .small{
+    color: darkslategray;
+    font-size: 22px;
+    text-align: center;
+  }
+  .abouttext{
+    font-size: 16px;
+    text-align: center;
+  }
+  .button{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: honeydew;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+</style>
 <head>
   <title>Evoli Zentrum <3</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<h1 style="text-align: center">Evoli Zentrum Homepage</h1>
+  <h1 class="headline">Evoli Zentrum Homepage</h1>
+  <h1 class="small">About:</h1>
+  <p class="abouttext">
+    Hier findest du alles über Pokemon. Von Spielregeln, über aktuelle und<br>
+  beliebte Sets sowie eine Liste von seltenen Karten und ihren Werten. In Zukunft ist<br>
+    hier auch ein Abteil für den Kauf und Verkauf von Pokemonkarten geplant.<br>
+  Außerdem wird man sich als Nutzer registrieren können und seine gesammelten Karten<br>
+  mit Bildern in eine Galerie stellen können und bewerten lassen.<br> <br>
+  Viel Spaß!</p>
+<button class="button">aktuelle Sets</button>
 </body>
 </html>
