@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 public class StudentController {
 
     @GetMapping("/")
-    public String helloWorld() {
-       return "students";
+    public String homepage() {
+       return "startseite";
    }
 
 }
